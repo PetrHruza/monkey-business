@@ -1,56 +1,93 @@
 #hero {
-  height: 100vh;
-  width: 100%;
-  background-image: url("https://images.unsplash.com/photo-1642621668575-93550304b614?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2831&q=80");
-  background-size: cover;
-  background-position: top center;
-  position: relative;
-  /* animation: bg_img_scaling 3s ease-in-out forwards; */
-  z-index: 1;
+  background-color: rgb(212, 212, 212);
+  display: flex;
+  justify-content: center;
 }
 
-#hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.7;
-  z-index: -1;
+.hero {
+  width: 1600px;
+  height: calc(100vh - 80px);
+  background-color: rgb(212, 212, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#hero h1 {
-    letter-spacing: .3rem;
-    display: block;
-    width: fit-content;
-    color: white;
-    font-size: 6rem;
+.hero-left {
+  width: 30%;
+  margin: 30px 20px;
+  /* border: 1px solid hotpink; */
 }
 
-#hero h2 {
-    letter-spacing: .9rem;
-    width: fit-content;
-    color: white;
-    font-size: 3rem;
+.hero-right {
+  /* border: 1px solid hotpink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#hero .hero {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px;
-    justify-content: flex-start;
+.hero-right img {
+  max-width: 670px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid hotpink;
+  border-radius: 50% 20% / 10% 40%;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.hero-left h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-left h2 {
+  color: hotpink;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.hero-left p {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin: 30px 0;
+}
+
+.cta-btn {
+  padding: 20px 30px;
+  background-color: hotpink;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.5s ease;
+  transition-property: background-color, color, border;
+}
+
+.cta-btn:hover {
+  background-color: white;
+  color: hotpink;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column;
   }
 
+  .hero-left {
+      width: 60%;
+      margin-bottom: 30px;
+  }
 
-@keyframes bg_img_scaling {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.1);
-    }
+  .hero-right img {
+    max-width: 500px;
+  }
 }
-

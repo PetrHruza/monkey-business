@@ -1,0 +1,63 @@
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: hotpink;
+}
+
+ul {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    padding: 0 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+}
+
+ul li a::after {
+content: '';
+display: block;
+height: 4px;
+width: 0;
+background-color: hotpink;
+transition: .5s all;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar .contact-btn {
+    padding: 10px 20px;
+    background-color: hotpink;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  
+    transition: 0.5s ease;
+    transition-property: background-color, color, border;
+  }
+  
+  .navbar .contact-btn:hover {
+    background-color: white;
+    color: hotpink;
+  }
