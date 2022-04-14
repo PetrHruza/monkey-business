@@ -1,34 +1,93 @@
 #hero {
-  height: 100vh;
-  width: 100vw;
+  background-color: rgb(212, 212, 212);
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  padding: 80px 10px;
 }
 
-#hero .hero {
-    width: min(1200px, calc(70% + 300px));
-  /* width: clamp(600px, 90%, 1400px); */
-  height: 100%;
-  background-color: #0ead69;
-  border-radius: 20px;
-  margin: 20px auto;
+.hero {
+  width: 1600px;
+  height: calc(100vh - 80px);
+  background-color: rgb(212, 212, 212);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .hero-left {
-  width: 50%;
-  height: 600px;
-  /* background-color: magenta; */
+  width: 30%;
+  margin: 30px 20px;
+  /* border: 1px solid hotpink; */
 }
 
 .hero-right {
-  width: 50%;
-  height: 600px;
-  box-sizing: border-box;
-  /* background-color: yellow; */
+  /* border: 1px solid hotpink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  max-width: 670px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid hotpink;
+  border-radius: 50% 20% / 10% 40%;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.hero-left h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-left h2 {
+  color: hotpink;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.hero-left p {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin: 30px 0;
+}
+
+.cta-btn {
+  padding: 20px 30px;
+  background-color: hotpink;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.5s ease;
+  transition-property: background-color, color, border;
+}
+
+.cta-btn:hover {
+  background-color: white;
+  color: hotpink;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-left {
+      width: 60%;
+      margin-bottom: 30px;
+  }
+
+  .hero-right img {
+    max-width: 500px;
+  }
 }

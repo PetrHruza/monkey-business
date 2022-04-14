@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Hero from './Hero';
+import React from "react";
+import Hero from "./Hero";
+import Header from "./Header";
+import About from "./About";
 
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Hero />
+      <About />
     </div>
   );
 }
